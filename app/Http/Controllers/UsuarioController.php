@@ -9,11 +9,19 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Permission;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Arr;
 
 class UsuarioController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:ver-usuario|crear-usuario|editar-usuario|borrar-usuario', ['only' => ['index']]);
+         $this->middleware('permission:crear-usuario', ['only' => ['create','store']]);
+         $this->middleware('permission:editar-usuario', ['only' => ['edit','update']]);
+         $this->middleware('permission:borrar-usuario', ['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +34,7 @@ class UsuarioController extends Controller
         return view('usuarios.index',compact('usuarios')); */
 
         //Con paginación
-        $usuarios = User::paginate(5);
+        $usuarios = User::paginate(10);
         return view('usuarios.index',compact('usuarios'));
 
         //al usar esta paginacion, recordar poner en el el index.blade.php este codigo  {!! $usuarios->links() !!}

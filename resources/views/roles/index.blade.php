@@ -32,7 +32,7 @@
                                         
                                         @can('borrar-rol')
                                             {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
-                                                {!! Form::submit('Borrar', ['class' => 'btn btn-danger']) !!}
+                                                {!! Form::submit('Borrar', ['class' => 'btn btn-danger', 'data-toggle' =>'tooltip','title'=>"", 'data-confirm' =>"Estas Seguro?|Esta acción no se puede deshacer. ¿Quieres continuar?", 'data-confirm-yes' => "alert('Deleted')", 'data-original-title' => "Delete"]) !!}
                                             {!! Form::close() !!}
                                         @endcan
                                     </td>

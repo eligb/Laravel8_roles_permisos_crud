@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBlogsTable extends Migration
+class Asistencias extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateBlogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('blogs', function (Blueprint $table) {
-            $table->id();
-            $table->string('titulo');
-            $table->text('contenido');
-            $table->timestamps();
-        });
+        //
+        Schema::create('asistencias', function (Blueprint $table) {
+        $table->engine="InnoDB";
+        $table->id();
+        $table->bigInteger('empleados_id')->unsigned();
+        $table->date_time_set();
+    }); 
     }
 
     /**
@@ -28,6 +29,6 @@ class CreateBlogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blogs');
+        //
     }
 }

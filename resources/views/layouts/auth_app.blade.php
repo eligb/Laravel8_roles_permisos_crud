@@ -20,16 +20,16 @@
 <body>
 <div id="app">
     <section class="section">
-        <div class="container mt-5">
+        <div class="container mt-2">
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="login-brand">
-                        <img src="{{ asset('img/logo.png') }}" alt="logo" width="100"
+                        <img src="{{ asset('img/logo.png') }}" alt="img" width="160" height="80" 
                              class="shadow-light">
                     </div>
                     @yield('content')
                     <div class="simple-footer">
-{{--                        Copyright &copy; {{ getSettingValue('application_name') }}  {{ date('Y') }}--}}
+{{--                        Elimar Gonzalez {{ getSettingValue('application_name') }}  {{ date('M/Y') }}--}}
                     </div>
                 </div>
             </div>

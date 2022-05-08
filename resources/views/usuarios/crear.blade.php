@@ -3,7 +3,7 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h3 class="page__heading">Alta de Usuarios</h3>
+            <h3 class="page__heading">Registro de Usuarios</h3>
         </div>
         <div class="section-body">
             <div class="row">
@@ -33,19 +33,19 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <label for="email">E-mail</label>
+                                    <label for="email">Correo</label>
                                     {!! Form::text('email', null, array('class' => 'form-control')) !!}
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <label for="password">Password</label>
+                                    <label for="password">Contraseña</label>
                                     {!! Form::password('password', array('class' => 'form-control')) !!}
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <label for="confirm-password">Confirmar Password</label>
+                                    <label for="confirm-password">Confirmar Contraseña</label>
                                     {!! Form::password('confirm-password', array('class' => 'form-control')) !!}
                                 </div>
                             </div>

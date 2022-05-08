@@ -16,7 +16,7 @@
                               <thead style="background-color:#6777ef">                                     
                                   <th style="display: none;">ID</th>
                                   <th style="color:#fff;">Nombre</th>
-                                  <th style="color:#fff;">E-mail</th>
+                                  <th style="color:#fff;">Correo</th>
                                   <th style="color:#fff;">Rol</th>
                                   <th style="color:#fff;">Acciones</th>                                                                   
                               </thead>
@@ -40,6 +40,8 @@
                                       {!! Form::open(['method' => 'DELETE','route' => ['usuarios.destroy', $usuario->id],'style'=>'display:inline']) !!}
                                           {!! Form::submit('Borrar', ['class' => 'btn btn-danger']) !!}
                                       {!! Form::close() !!}
+
+                                      <!-- ,'data-confirm' =>"Estas Seguro?|Esta acción no se puede deshacer. ¿Quieres continuar?" -->
                                     </td>
                                   </tr>
                                 @endforeach

@@ -3,7 +3,7 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h3 class="page__heading">Dashboard</h3>
+            <h4 class="page__heading">Bienvenidos al sistema GONBARRHH</h4>
         </div>
         <div class="section-body">
             <div class="row">
@@ -43,13 +43,13 @@
                                     <div class="col-md-4 col-xl-4">
                                         <div class="card bg-c-pink order-card">
                                             <div class="card-block">
-                                                <h5>Blogs</h5>                                               
+                                                <h5>Empleados</h5>                                               
                                                 @php
-                                                 use App\Models\Blog;
-                                                $cant_blogs = Blog::count();                                                
+                                                 use App\Models\Empleado;
+                                                $cant_empleados = Empleado::count();                                                
                                                 @endphp
-                                                <h2 class="text-right"><i class="fa fa-blog f-left"></i><span>{{$cant_blogs}}</span></h2>
-                                                <p class="m-b-0 text-right"><a href="/blogs" class="text-white">Ver más</a></p>
+                                                <h2 class="text-right"><i class="fa fa-address-card f-left"></i><span>{{$cant_empleados}}</span></h2>
+                                                <p class="m-b-0 text-right"><a href="/empleados" class="text-white">Ver más</a></p>
                                             </div>
                                         </div>
                                     </div>
